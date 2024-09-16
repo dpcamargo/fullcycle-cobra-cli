@@ -29,7 +29,7 @@ to quickly create a Cobra application.`,
 func init() {
 	rootCmd.AddCommand(pingCmd)
 	pingCmd.Flags().StringP("url", "u", "", "URL to ping")
-
+	
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
