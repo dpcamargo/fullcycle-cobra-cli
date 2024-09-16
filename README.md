@@ -19,4 +19,9 @@
 
 9 - VarP sets value to variable
 
-10 - Hooks allow to 
+10 - Hooks allow PreRun and PostRun. Add PreRun and PostRun to ```cobra.Command```. 
+
+11 - For errors use RunE as it returns error. Also has PreRunE and PostRunE.
+
+12 - 
+

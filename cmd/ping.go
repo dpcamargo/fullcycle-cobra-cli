@@ -24,12 +24,18 @@ to quickly create a Cobra application.`,
 		flag, _ := cmd.Flags().GetString("url")
 		fmt.Println(flag)
 	},
+	PreRun: func(cmd *cobra.Command, args []string) {
+		fmt.Println("ping pre run")
+	},
+	PostRun: func(cmd *cobra.Command, args []string) {
+		fmt.Println("ping post run")
+	},
 }
 
 func init() {
 	rootCmd.AddCommand(pingCmd)
 	pingCmd.Flags().StringP("url", "u", "", "URL to ping")
-	
+
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
